@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>派對公司官方網站</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="mycss01.css">
+    <link rel="stylesheet" href="animate.min.css">
+
+    <style>
+        .bg-cover {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        /* s03-2  Carusel 幻燈片效果 */
+        .s03-img {
+            width: 100%;
+            height: 85vh;
+            object-fit: cover;
+        }
+
+        .carousel-item {
+            min-height: 400px;
+            position: relative;
+        }
+
+        .carousel-item::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.9));
+        }
+
+        .carousel-caption-block {
+            position: absolute;
+            left: 18%;
+            bottom: 30%;
+            max-width: 500px;
+        }
+
+        .carousel-badge {
+            color: #ffc107;
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            border-radius: 100px;
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            letter-spacing: 0.2rem;
+            display: inline-block;
+        }
+
+        .carousel-list i {
+            width: 18px;
+        }
+
+        /* .s05 時間軸 */
+        .s05-timeline-section {
+            position: relative;
+        }
+
+        .s05-timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e9e8e8;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .s05-timeline-section-pointer {
+            position: relative;
+        }
+
+        .s05-timeline-section-pointer::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #e9e8e8;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid #dd5fa9;
+            border-radius: 50%;
+        }
+
+        .s05-timeline-section-pointer:hover::before {
+            width: 30px;
+            height: 30px;
+        }
+
+        .s08-userimg {
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            transition: border-radius 1s, transform 1s;
+        }
+
+        .s08-userimg:hover {
+            border-radius: 50px;
+            box-shadow: 2px 2px 2px 2px #ccc;
+            transform: scale(1.2);
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .s07-text,
+            .s09-text {
+                z-index: 1;
+                background-color: rgba(80, 75, 75, 0.5);
+                color: #e9e8e8;
+                padding: 20px;
+                margin: 15px;
+                border-radius: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- *****************s01 社群連結******************** -->
+    <section id="s01" class="bg-secondary">
+        <div class="container">
+            <div class="text-end py-2">
+                <a href="#" class="text-decoration-none">
+                    <i class="fa-brands fa-square-facebook fa-beat fa-2x" style="color: rgb(14, 94, 236);"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <i class="fa-brands fa-line fa-2x text-success"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <i class="fa-brands fa-square-x-twitter fa-2x text-dark"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- *****************s02 選單******************** -->
+    <section id="s02" class="bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-sharp-duotone fa-solid fa-champagne-glasses fa-3x " style="color: rgb(214, 37, 37);" data-wow-duration="2s" data-wow-delay="0s" data-wow-iteration="2"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link fw-900 text-primary active" aria-current="page" href="#">
+                                    <i class="fa-solid fa-house text-primary"></i>
+                                    首頁
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="#">
+                                    <i class="fa-solid fa-info text-warning"></i>
+                                    關於我們
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    服務項目
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">生日派對</a></li>
+                                    <li><a class="dropdown-item" href="#">公司尾牙</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="btn btn-outline-warning" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">註冊</button>
+                            <button class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">登入</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="jquery-4.0.0.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="wow.min.js"></script>
+    <script>
